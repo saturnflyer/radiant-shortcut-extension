@@ -1,8 +1,8 @@
 class ShortcutDisplayPage < Page
   
-  # def virtual?
-  #   true
-  # end
+  def virtual?
+    true
+  end
   
   def cache?
     true
