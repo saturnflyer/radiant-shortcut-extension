@@ -1,0 +1,9 @@
+%tr
+  %th.label
+    Shortcut
+  %td
+    - checked_value = (@page.new_record? ? config['defaults.page.shortcut?'] : @page.shortcut)
+    = check_box 'page', 'shortcut', :checked => checked_value
+    %label{:for => "page_shortcut"} Provide this page as a shortcut?
+    - if @page.shortcut?
+      = link_to "View", "/#{@page.slug}"
