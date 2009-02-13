@@ -7,7 +7,7 @@ module ShortcutTags
     path like the standard 'url' tag.
   }
   tag 'shortcut_url' do |tag|
-    tag.locals.page.shortcut? ? %{/#{tag.locals.page.slug}} : tag.render('url')
+    tag.locals.page.shortcut? ? %{/#{tag.locals.page.slug}/} : tag.render('url')
   end
   
   desc %{
